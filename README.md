@@ -1,4 +1,4 @@
-# Realestate-Next
+# Real Estate Site Built with Next.js
 
 ### Features
 * User authentication with Google & Next Auth
