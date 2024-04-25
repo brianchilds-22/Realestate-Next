@@ -1,5 +1,5 @@
 import "@/assets/styles/globals.css";
-import { title } from "process";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "RealtorReady | Find your next Rental Property",
@@ -11,7 +11,10 @@ export const metadata = {
 const MainLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 };
