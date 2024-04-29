@@ -5,7 +5,7 @@ import { fetchProperty } from "@/utils/requests";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
 import Link from "next/link";
 
-const PropertyPage2 = () => {
+const PropertyPage = () => {
   const { id } = useParams();
 
   const [property, setProperty] = useState(null);
@@ -288,4 +288,4 @@ const PropertyPage2 = () => {
   );
 };
 
-export default PropertyPage2;
+export default PropertyPage;
