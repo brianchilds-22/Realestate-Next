@@ -47,7 +47,7 @@ const PropertyCard = ({ property }) => {
             <span className="md:hidden lg:inline">Beds</span>
           </p>
           <p>
-            <FaBath className="inline mr-2" /> {property.beds}{" "}
+            <FaBath className="inline mr-2" /> {property.baths}{" "}
             <span className="md:hidden lg:inline">Baths</span>
           </p>
           <p>

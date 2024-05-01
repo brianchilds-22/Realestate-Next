@@ -47,13 +47,13 @@ export const POST = async (request) => {
         zipcode: formData.get("location.zipcode"),
       },
       beds: formData.get("beds"),
-      bath: formData.get("baths"),
+      baths: formData.get("baths"),
       square_feet: formData.get("square_feet"),
       amenities,
       rates: {
         weekly: formData.get("rates.weekly"),
         monthly: formData.get("rates.monthly"),
-        nighly: formData.get("rates.nighly"),
+        nightly: formData.get("rates.nightly"),
       },
       seller_info: {
         name: formData.get("seller_info.name"),
