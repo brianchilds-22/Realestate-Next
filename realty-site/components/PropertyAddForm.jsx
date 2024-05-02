@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 const PropertyAddForm = () => {
   const [mounted, setMounted] = useState(false);
   const [fields, setFields] = useState({
-    type: "Apartment",
-    name: "Test Name",
-    description: "Test Description",
+    type: "",
+    name: "",
+    description: "",
     location: {
-      street: "Test Street",
-      city: "Test City",
-      state: "Test State",
-      zipcode: "Zipcode",
+      street: "",
+      city: "",
+      state: "",
+      zipcode: "",
     },
-    beds: "3",
-    baths: "2",
-    square_feet: "1500",
+    beds: "",
+    baths: "",
+    square_feet: "",
     amenities: [],
     rates: {
       weekly: "",
