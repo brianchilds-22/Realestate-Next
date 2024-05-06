@@ -25,8 +25,8 @@ export const DELETE = async (request, { params }) => {
 
     const sessionUser = await getSessionUser();
 
-    // check for session
-    if (!sessionUser || sessionUser.userId) {
+    // Check for session
+    if (!sessionUser || !sessionUser.userId) {
       return new Response("User ID is required", { status: 401 });
     }
 
@@ -36,7 +36,7 @@ export const DELETE = async (request, { params }) => {
 
     const property = await Property.findById(propertyId);
 
-    if (!property) return new Response("Property not found", { status: 404 });
+    if (!property) return new Response("Property Not Found", { status: 404 });
 
     // Verify ownership
     if (property.owner.toString() !== userId) {
@@ -45,9 +45,11 @@ export const DELETE = async (request, { params }) => {
 
     await property.deleteOne();
 
-    return new Response("Property Deleted", { status: 200 });
+    return new Response("Property Deleted", {
+      status: 200,
+    });
   } catch (error) {
     console.log(error);
-    return new Response("Something went wrong", { status: 500 });
+    return new Response("Something Went Wrong", { status: 500 });
   }
 };
