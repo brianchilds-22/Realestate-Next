@@ -2,7 +2,6 @@ import connectDB from "@/config/database";
 import Message from "@/models/Message";
 import { getSessionUser } from "@/utils/getSessionUser";
 import dynamic from "next/dynamic";
-import { FaUserFriends } from "react-icons/fa";
 
 export const dynamic = "force-dynamic";
 
