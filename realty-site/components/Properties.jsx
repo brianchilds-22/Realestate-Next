@@ -9,7 +9,7 @@ const Properties = () => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   //   set default images for page size
-  const [pageSize, setPageSize] = useState(0);
+  const [pageSize, setPageSize] = useState(6);
   const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const Properties = () => {
         }
 
         const data = await res.json();
-        setProperties(data);
-        setTotalItems(data.totalItems);
+        setProperties(data.properties);
+        setTotalItems(data.total);
       } catch (error) {
         console.log(error);
       } finally {
@@ -54,12 +54,12 @@ const Properties = () => {
             ))}
           </div>
         )}
-        {/* <Pagination
+        <Pagination
           page={page}
           pageSize={pageSize}
           totalItems={totalItems}
           onPageChange={handlePageChange}
-        /> */}
+        />
       </div>
     </section>
   );
